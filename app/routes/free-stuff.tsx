@@ -127,12 +127,6 @@ function SectionLabel({ label, to }: { label: string; to: string }) {
           {label}
         </span>
       </div>
-      <Link
-        to={to}
-        className="hero-mono text-xs font-bold tracking-widest uppercase text-zinc-400 dark:text-zinc-500 hover:text-amber-600 dark:hover:text-amber-500 transition-colors duration-200"
-      >
-        VIEW ALL →
-      </Link>
     </div>
   );
 }
