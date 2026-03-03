@@ -2,6 +2,19 @@ import { Link } from "react-router";
 import { guitarCharts, type GuitarChart } from "~/data/guitar/charts";
 import { bassCharts, type BassChart } from "~/data/bass/charts";
 
+import { type MetaFunction } from "react-router";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Free Guitar & Bass Resources | Bob Teaches Music" },
+    {
+      name: "description",
+      content:
+        "Free lesson materials, charts and resources for students of Bob Teaches Music. Sign up for a free account to access.",
+    },
+  ];
+};
+
 // ── Download card ──────────────────────────────────────────────────────────────
 function ChartCard({
   artist,

@@ -28,6 +28,7 @@ export default defineConfig({
         "/lessons/bass",
         "/signup",
         "/contact",
+        "/free-stuff",
       ],
     }),
   ],

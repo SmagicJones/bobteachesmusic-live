@@ -20,6 +20,18 @@ import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
 import { Alert, AlertDescription } from "~/components/ui/alert";
+import { type MetaFunction } from "react-router";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Sign Up | Bob Teaches Music" },
+    {
+      name: "description",
+      content:
+        "Create an account to access free resources and lesson materials from Bob Teaches Music.",
+    },
+  ];
+};
 
 export async function action({ request }: ActionFunctionArgs) {
   const formData = await request.formData();

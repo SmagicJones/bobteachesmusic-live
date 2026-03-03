@@ -18,6 +18,18 @@ import {
 } from "~/components/ui/card";
 
 import { useEffect, useRef } from "react";
+import { type MetaFunction } from "react-router";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Contact Bob | Book Guitar & Bass Lessons | Bob Teaches Music" },
+    {
+      name: "description",
+      content:
+        "Get in touch to book guitar or bass lessons in Blackburn, Preston or Chorley, or enquire about online tuition. Happy to answer any questions!",
+    },
+  ];
+};
 
 export async function action({ request }: ActionFunctionArgs) {
   const formData = await request.formData();

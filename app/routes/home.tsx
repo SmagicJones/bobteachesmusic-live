@@ -8,11 +8,14 @@ import { Hero } from "~/components/Hero";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "bobteachesmusic - " },
+    {
+      title:
+        "Bob Teaches Music | Guitar & Bass Lessons in Blackburn, Preston & Chorley",
+    },
     {
       name: "description",
       content:
-        "guitar and bass tuition suited to your needs around Blackburn, Preston, Chorley - tuition available in person or online - make enquiry today!",
+        "Expert guitar and bass tuition around Blackburn, Preston and Chorley. In-person and online lessons tailored to your level. Get in touch today!",
     },
   ];
 };
