@@ -4,12 +4,14 @@ import { bassCharts, type BassChart } from "~/data/bass/charts";
 
 // ── Download card ──────────────────────────────────────────────────────────────
 function ChartCard({
+  artist,
   title,
   intro,
   comment,
   download_url,
   accent = "amber",
 }: {
+  artist: string;
   title: string;
   intro: string;
   comment?: string;
@@ -52,6 +54,9 @@ function ChartCard({
           <h3 className="hero-display text-xl font-black tracking-tight text-zinc-900 dark:text-zinc-50 leading-tight">
             {title}
           </h3>
+          <p className="hero-mono text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+            {artist}
+          </p>
           <p className="hero-mono text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
             {intro}
           </p>
@@ -191,6 +196,7 @@ export default function FreeStuffPage() {
             {guitarCharts.map((chart: GuitarChart) => (
               <ChartCard
                 key={chart.download_url}
+                artist={chart.artist}
                 title={chart.title}
                 intro={chart.intro}
                 comment={chart.comment}
@@ -215,6 +221,7 @@ export default function FreeStuffPage() {
             {bassCharts.map((chart: BassChart) => (
               <ChartCard
                 key={chart.download_url}
+                artist={chart.artist}
                 title={chart.title}
                 intro={chart.intro}
                 comment={chart.comment}
@@ -244,42 +251,3 @@ export default function FreeStuffPage() {
     </main>
   );
 }
-
-// import { bassCharts, type BassChart } from "~/data/bass/charts";
-// import {
-//   Card,
-//   CardHeader,
-//   CardTitle,
-//   CardDescription,
-//   CardContent,
-//   CardFooter,
-// } from "~/components/ui/card";
-
-// export default function FreeStuff() {
-//   return (
-//     <main>
-//       <header className="flex justify-center items-center p-4">
-//         <div className="">
-//           <h1 className="text-2xl">Free Stuff!!!</h1>
-//         </div>
-//       </header>
-
-//       <section>
-//         <div className="grid md:grid-cols-2 gap-4 m-2">
-//           {bassCharts.map((chart: BassChart) => (
-//             <Card>
-//               <CardHeader>
-//                 <CardTitle>{chart.title}</CardTitle>
-//                 <CardDescription>{chart.intro}</CardDescription>
-//               </CardHeader>
-//               <CardContent>{chart.comment}</CardContent>
-//               <CardFooter>
-//                 <a href={chart.download_url}>Download Now!</a>
-//               </CardFooter>
-//             </Card>
-//           ))}
-//         </div>
-//       </section>
-//     </main>
-//   );
-// }

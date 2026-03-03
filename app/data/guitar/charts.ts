@@ -1,4 +1,5 @@
 export interface GuitarChart {
+  artist: string;
   title: string;
   intro: string;
   comment: string;
@@ -7,17 +8,11 @@ export interface GuitarChart {
 
 export const guitarCharts: GuitarChart[] = [
   {
-    title: "brown paper bag",
-    intro: "roni size iconic riff",
+    artist: "Me Mate",
+    title: "Melody Idea",
+    intro: "something to try - what other chords could I use?",
     comment:
-      "it can be a little bit fiddly getting these notes and I could have made an error of one semitone or fret - however you see it in the original riff.  Its a start with exploring it though - you might find a better way of doing it 😃",
+      "Just a little Idea that I've had might be fun for someone else to play with too? I've mostly been making Bass charts recently - please do send me a message and tell me what guitar charts you want doing...",
     download_url: "/downloads/bass/brown-paper-bag-bass.pdf",
-  },
-  {
-    title: "good things will come after the pressure",
-    intro: "a really tasty riff I found whilst listening to 6Music",
-    comment:
-      " - I don't think I would have discovered this otherwise. Its just a bit different from where I'm coming from and really made me want to know what was happening on the bass when I first heard it - again these are really just rough sketches to get you up and running playing the thing!  If you like the tune too why not give it a go!",
-    download_url: "/downloads/bass/good-things-after-the-pressure-bass.pdf",
   },
 ];
