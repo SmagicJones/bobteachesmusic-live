@@ -2,6 +2,7 @@ import styles from "./logout.module.css";
 import { useNavigate } from "react-router";
 import { useAuth } from "~/contexts/useAuth";
 import { fbAuth } from "~/firebase/firebaseConfig";
+import { Button } from "../ui/button";
 
 export default function Logout() {
   const navigate = useNavigate();
@@ -22,11 +23,8 @@ export default function Logout() {
   }
 
   return (
-    <button
-      onClick={handleLogout}
-      className={`bg-red-500 text-white font-semibold py-2 px-4 rounded hover:bg-red-600 transition duration-200 ${styles.logoutButton}`}
-    >
+    <Button className="w-full" onClick={handleLogout}>
       Logout
-    </button>
+    </Button>
   );
 }

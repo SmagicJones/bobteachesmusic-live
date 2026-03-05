@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router";
 import { MenuIcon, X } from "lucide-react";
 
 import DarkModeToggle from "./DarkModeToggle";
-import { Login } from "./login/login";
+
 import Logout from "./logout/logout";
 
 import { useAuth } from "~/contexts/useAuth";
@@ -83,9 +83,25 @@ export default function MobileNav() {
                   <Accordion type="single" collapsible>
                     <AccordionItem value="item-1">
                       <AccordionTrigger className="cursor-pointer hover:text-slate-400">
-                        <NavLink to="/free-stuff">Free Stuff</NavLink>
+                        <NavLink to="/free-stuff">
+                          <DrawerClose className="pb-2 cursor-pointer">
+                            Free Stuff
+                          </DrawerClose>
+                        </NavLink>
                       </AccordionTrigger>
-                      <AccordionContent></AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                </li>
+                <li>
+                  <Accordion type="single" collapsible>
+                    <AccordionItem value="item-1">
+                      <AccordionTrigger className="cursor-pointer hover:text-slate-400">
+                        <NavLink to="/contact">
+                          <DrawerClose className="pb-2 cursor-pointer">
+                            Contact
+                          </DrawerClose>
+                        </NavLink>
+                      </AccordionTrigger>
                     </AccordionItem>
                   </Accordion>
                 </li>
@@ -93,11 +109,16 @@ export default function MobileNav() {
             </DrawerHeader>
 
             <div className="flex justify-center items-center p-4">
-              <Button asChild>
-                <NavLink to={isAuthenticated ? "/free-stuff" : "/login"}>
-                  {isAuthenticated ? "Free Stuff" : "Login"}
-                </NavLink>
-              </Button>
+              <DrawerClose asChild>
+                <Button asChild className="w-full">
+                  <NavLink to={isAuthenticated ? "/free-stuff" : "/login"}>
+                    {isAuthenticated ? "Free Stuff" : "Login"}
+                  </NavLink>
+                </Button>
+              </DrawerClose>
+            </div>
+            <div className="flex justify-center items-center p-4">
+              <Logout />
             </div>
             <div className="p-4">
               <DarkModeToggle />
