@@ -107,7 +107,7 @@ export function Footer() {
               &copy; {new Date().getFullYear()} bobteachesmusic. All rights
               reserved.
             </p>
-            <div className="flex items-center gap-4">
+            {/* <div className="flex items-center gap-4">
               <Link
                 to="/privacy"
                 className="text-xs text-zinc-500 dark:text-zinc-500 hover:text-amber-600 dark:hover:text-amber-500 transition-colors duration-300"
@@ -123,7 +123,7 @@ export function Footer() {
               >
                 Terms
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
