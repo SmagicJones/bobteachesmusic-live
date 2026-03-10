@@ -3,24 +3,14 @@ import { NavLink } from "react-router";
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "./ui/navigation-menu";
 
-import { Button } from "./ui/button";
-
-import { useAuth } from "~/contexts/useAuth";
 import { LogoLink } from "./LogoLink";
 
 export default function DesktopNav() {
-  const { user } = useAuth();
-
-  const isAuthenticated = Boolean(user);
-
   return (
     <div className="desk w-[100vw] flex justify-between items-center">
       <LogoLink />
@@ -110,11 +100,7 @@ export default function DesktopNav() {
         </NavigationMenuList>
       </NavigationMenu>
       <div className="flex justify-center items-center p-4">
-        <Button asChild>
-          <NavLink to={isAuthenticated ? "/free-stuff" : "/login"}>
-            {isAuthenticated ? "Free Stuff" : "Login"}
-          </NavLink>
-        </Button>
+        <LogoLink />
       </div>
     </div>
   );

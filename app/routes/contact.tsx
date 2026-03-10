@@ -14,7 +14,6 @@ import {
   CardTitle,
   CardDescription,
   CardContent,
-  CardFooter,
 } from "~/components/ui/card";
 
 import { useEffect, useRef } from "react";

@@ -1,5 +1,4 @@
 import { Outlet, useNavigation } from "react-router";
-import AuthProvider from "~/contexts/authProvider";
 
 import DesktopNav from "~/components/DesktopNav";
 import MobileNav from "~/components/MobileNav";
@@ -11,7 +10,7 @@ export default function RootLayout() {
   const navigation = useNavigation();
   const isNavigating = navigation.state !== "idle";
   return (
-    <AuthProvider>
+    <>
       <DesktopNav />
       <MobileNav />
 
@@ -26,6 +25,6 @@ export default function RootLayout() {
       )}
 
       <Footer />
-    </AuthProvider>
+    </>
   );
 }

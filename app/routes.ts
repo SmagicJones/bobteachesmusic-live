@@ -11,11 +11,7 @@ export default [
     route("lessons", "routes/lessons/index.tsx"),
     route("lessons/guitar", "routes/lessons/guitar.tsx"),
     route("lessons/bass", "routes/lessons/bass.tsx"),
-    route("signup", "routes/signup.tsx"),
     route("contact", "routes/contact.tsx"),
-    route("login", "routes/login.tsx"),
-    layout("components/loggedWrapper.tsx", [
-      route("free-stuff", "routes/free-stuff.tsx"),
-    ]),
+    route("free-stuff", "routes/free-stuff.tsx"),
   ]),
 ] satisfies RouteConfig;

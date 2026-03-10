@@ -1,9 +1,4 @@
-import { Link } from "react-router";
-import { Login } from "../components/login/login";
-
 import { type MetaFunction } from "react-router";
-import { useAuth } from "~/contexts/useAuth";
-
 import { Hero } from "~/components/Hero";
 
 export const meta: MetaFunction = () => {
@@ -21,9 +16,6 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Home() {
-  const { user } = useAuth();
-  const isAuthenticated = Boolean(user);
-
   return (
     <main>
       <Hero />

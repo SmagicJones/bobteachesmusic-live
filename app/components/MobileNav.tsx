@@ -4,10 +4,6 @@ import { MenuIcon, X } from "lucide-react";
 
 import DarkModeToggle from "./DarkModeToggle";
 
-import Logout from "./logout/logout";
-
-import { useAuth } from "~/contexts/useAuth";
-
 import {
   Drawer,
   DrawerClose,
@@ -30,8 +26,6 @@ import { Button } from "./ui/button";
 import { LogoLink } from "./LogoLink";
 
 export default function MobileNav() {
-  const { user } = useAuth();
-  const isAuthenticated = Boolean(user);
   return (
     <div className="mobile w-[100%] flex justify-between">
       <LogoLink />
@@ -108,18 +102,6 @@ export default function MobileNav() {
               </ul>
             </DrawerHeader>
 
-            <div className="flex justify-center items-center p-4">
-              <DrawerClose asChild>
-                <Button asChild className="w-full">
-                  <NavLink to={isAuthenticated ? "/free-stuff" : "/login"}>
-                    {isAuthenticated ? "Free Stuff" : "Login"}
-                  </NavLink>
-                </Button>
-              </DrawerClose>
-            </div>
-            <div className="flex justify-center items-center p-4">
-              <Logout />
-            </div>
             <div className="p-4">
               <DarkModeToggle />
             </div>

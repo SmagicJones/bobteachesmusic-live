@@ -5,10 +5,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useNavigation,
 } from "react-router";
-
-import AuthProvider from "./contexts/authProvider";
 
 import type { Route } from "./+types/root";
 import stylesheet from "./app.css?url";
@@ -55,7 +52,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         />
       </head>
       <body className="font-mono">
-        <AuthProvider>{children}</AuthProvider>
+        {children}
         <ScrollRestoration />
         <Scripts />
       </body>
